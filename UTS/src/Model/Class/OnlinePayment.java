@@ -15,7 +15,7 @@ public class OnlinePayment extends Payment{
         this.serviceProvider = serviceProvider;
     }
 
-    public double proccessPayment(CustomerType tipeMember, double amount, Date stay){
+    public double proccessPayment(CustomerType tipeMember, double amount, Integer stay){
         amount *= stay;
 
         if(tipeMember.equals(CustomerType.VIP)){

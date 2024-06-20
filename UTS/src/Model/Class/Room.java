@@ -11,18 +11,18 @@ public class Room {
     private Integer floor;
     private RoomStatus status;
     private TipeKamar tipe;
-    private List<Reservation> listReserve;
+    private Reservation Reserve;
 
     public Room(){
     }
 
-    public Room(Integer roomNumber, Integer capacity, Integer floor, RoomStatus status, TipeKamar tipe, List<Reservation> listReserve) {
+    public Room(Integer roomNumber, Integer capacity, Integer floor, RoomStatus status, TipeKamar tipe, Reservation Reserve) {
         this.roomNumber = roomNumber;
         this.capacity = capacity;
         this.floor = floor;
         this.status = status;
         this.tipe = tipe;
-        this.listReserve = listReserve;
+        this.Reserve = Reserve;
     }
 
     public Integer getRoomNumber() {
@@ -55,5 +55,21 @@ public class Room {
 
     public void setStatus(RoomStatus status) {
         this.status = status;
+    }
+
+    public Reservation getReserve() {
+        return Reserve;
+    }
+
+    public void setReserve(Reservation reserve) {
+        Reserve = reserve;
+    }
+
+    public TipeKamar getTipe() {
+        return tipe;
+    }
+
+    public void setTipe(TipeKamar tipe) {
+        this.tipe = tipe;
     }
 }

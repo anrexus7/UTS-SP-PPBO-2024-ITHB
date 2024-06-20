@@ -1,12 +1,14 @@
 package Model.Class;
 
 import Model.Enum.ReservationStatus;
+import Model.Enum.RoomStatus;
 
 public class Reservation {
     private Integer IDReservation;
     private Integer stayDay;
     private ReservationStatus status;
     private Payment payment;
+    private Room room;
 
     public Reservation() {}
 
@@ -18,10 +20,12 @@ public class Reservation {
     }
 
     public void bookRoom(){
-
+        room.setStatus(RoomStatus.BOOKED);
     }
 
-    public void cancelBooking(){}
+    public void cancelBooking(){
+        room.setStatus(RoomStatus.EMPTY);
+    }
 
     public void checkAvailability(){}
 
