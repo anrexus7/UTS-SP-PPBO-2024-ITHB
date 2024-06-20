@@ -11,9 +11,9 @@ public abstract class Payment {
 
     public Payment() {}
 
-    public Payment(Integer transactionNumber, double amount, Date dateOfTransaction) {
+    public Payment(Integer transactionNumber, Date dateOfTransaction) {
         this.transactionNumber = transactionNumber;
-        this.amount = amount;
+        this.amount = 1000000;
         this.dateOfTransaction = dateOfTransaction;
     }
 
